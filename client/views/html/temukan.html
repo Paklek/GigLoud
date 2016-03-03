@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GigLoud</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="../index.html" class="navbar-brand">GigLoud</a>
+					</div>
+					<div >
+						<ul class="nav navbar-nav">
+							<li><a href="../index.html">Home</a></li>
+							<li class="active"><a href="temukan.html" >Temukan</a></li>
+							<li><a href="">FAQ</a></li>
+							<li><a href="tentang.html">Tentang</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a id="daftar" href="daftar.html"><span class="glyphicon glyphicon-user">Daftar</span></a></li>
+							<li><a id="masuk" href="#masuk-modal"><span class="glyphicon glyphicon-log-in" data-toggle="modal" target="#masuk-modal" >Masuk</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class="sisi-kiri">
+			<select name="musisi" id="tipe-musisi">
+				<option value="">Semua tipe</option>
+				<option value="">Penyanyi</option>
+				<option value="">Gitaris</option>
+				<option value="">Keyboardis</option>
+				<option value="">Basis</option>
+				<option value="">Drummer</option>
+				<option value="">Band</option>
+			</select>
+			<select name="genre" id="genre">
+				<option value="">Semua genre</option>
+				<option value="">Rock</option>
+				<option value="">Pop</option>
+				<option value="">Pop Rock</option>
+				<option value="">Dangdut</option>
+				<option value="">Reggeae</option>
+				<option value="">Jazz</option>
+			</select>
+			<div class="list-musisi-group">
+				<div class="list-musisi">
+
+
+				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
+
+				  	<div class="isi-list-group-item">
+				  		Ampas Coffe
+				  	</div>
+				  	<div class=" isi-list-group-item">
+				  		Lokasi : Medan, 11 KM
+				  	</div>
+				  	<div class="isi-list-group-item">
+				  		Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!
+				  	</div>
+				  	<div class="fitur-temukan">
+				  		<button class="btn-md">Rp. 50.000 / lagu</button>
+				  	</div>
+				</div>
+				<div class="list-musisi">
+
+
+				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
+
+				  	<div class="isi-list-group-item">
+				  		Ampas Coffe
+				  	</div>
+				  	<div class=" isi-list-group-item">
+				  		Lokasi : Medan, 11 KM
+				  	</div>
+				  	<div class="isi-list-group-item">
+				  		Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!
+				  	</div>
+				</div>
+				<div class="list-musisi">
+
+
+				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
+
+				  	<div class="isi-list-group-item">
+				  		Ampas Coffe
+				  	</div>
+				  	<div class=" isi-list-group-item">
+				  		Lokasi : Medan, 11 KM
+				  	</div>
+				  	<div class="isi-list-group-item">
+				  		Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!
+				  	</div>
+				</div>
+
+				<div class="list-musisi">
+
+
+				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
+
+				  	<div class="isi-list-group-item">
+				  		Ampas Coffe
+				  	</div>
+				  	<div class=" isi-list-group-item">
+				  		Lokasi : Medan, 11 KM
+				  	</div>
+				  	<div class="isi-list-group-item">
+				  		bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aspernatur maiores accusamus quisquam dolorem non eaque ducimus labore quae in nobis, esse quo beatae, eum alias. Quia eos dolor culpa.
+			  	</div>
+			</div>
+
+		</div>
+			</div>
+		</div>
+
+		<!-- //Modal -->
+
+		<div class="modal fade" id="masuk-modal" role="dialog">
+	    <div class="modal-dialog">
+
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header" style="padding:35px 50px;">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4><span class="glyphicon glyphicon-lock"></span> Masuk</h4>
+	        </div>
+	        <div class="modal-body" style="padding:40px 50px;">
+	          <form role="form">
+	            <div class="form-group">
+	              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+	              <input type="text" class="form-control" id="usrname" placeholder="Masukkan email">
+	            </div>
+	            <div class="form-group">
+	              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+	              <input type="text" class="form-control" id="psw" placeholder="Masukkan Kata Sandi">
+	            </div>
+	            <div class="checkbox">
+	              <label><input type="checkbox" value="" checked>Ingat Saya</label>
+	            </div>
+	              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Masuk</button>
+	          </form>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Batal</button>
+	          <p>Belum terdaftar? <a href="#">Daftar</a></p>
+	          <p>Lupa <a href="#">Password?</a></p>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+
+
+		<!-- Modal// -->
+
+	<hr class="featurette-divider">
+
+</div>
+
+<footer>
+	<nav class="navbar navbar-inverse navbar-bottom">
+		<div class="container-fluid">
+			<div class="navbar-footer">
+				<p class="text-center text-muted">Copyright &copy; 2016 GigLoud. All Rights Reserved</p>
+			</div>
+
+		</div>
+	</nav>
+</footer>
+
+<script>
+$(document).ready(function(){
+    $("#masuk").click(function(){
+        $("#masuk-modal").modal();
+    });
+});
+</script>
+
+</body>
+</html>

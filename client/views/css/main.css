@@ -1,0 +1,66 @@
+.container{
+	border: 1px solid #dddddd;
+	margin-top: 20px;
+}
+.content{
+	margin-top: 7%;
+}
+.img-circle{
+	border: 1px solid black;
+}
+.first-slide, .second-slide, .third-slide{
+	margin: 0 auto;
+}
+p.text-center{
+	margin-top: 15px;
+}
+.btn-lg{
+	background-color:#ff6666;
+}
+/*a:hover{
+	background-color: #ff6666;
+}
+*/
+select#genre{
+	width:30%;
+	text-align: center;
+	margin:30px auto;
+}
+.sisi-kanan{
+	width: 40%;
+	margin:0;
+	float: right;
+	margin-top:50px;
+}
+.sisi-kiri{
+	width: 60%;
+	margin:0;
+	float: left;
+	margin-top: 50px;
+}
+.sisi-kiri-sm{
+	width: 20%;
+	float: left;
+	margin-top: 20px;
+}
+#list-gambar{
+	float: left;
+}
+#gambar-musisi{
+	float: left;
+	margin:0px 20px 20px 10px;
+
+}
+.isi-list-group-item{
+	width: 80%;
+}
+.list-musisi{
+	border: 1px solid #cccccc;
+	width: 100%;
+	height: 30%;
+	padding:40px 0;
+}
+.fitur-temukan{
+	float: left;
+	width: 20%;
+}
