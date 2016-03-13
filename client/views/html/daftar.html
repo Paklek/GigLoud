@@ -9,6 +9,30 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script>
+//    function initialize(){
+//      var properti_api = {
+//        name:Medan
+//      };
+//      var api = new document.getElementById("api",properti_api);
+//    }
+//    window.onload = initialize();
+
+$.ajax({
+  url         : "http://localhost:3000/api/locations",//lokasi dokumen yang berisi data json
+  type        : "GET",
+  dataType    : "json",//format dokumen
+  data        : {get_param : 'value'},
+  success     : function(data){
+    //merubah data json dari object menjadi string,
+    //dan tampilkan hasilnya melalui textarea
+//    document.getElementById('api').innerHTML = JSON.stringify(data);
+    document.getElementById('api').innerHTML = data[0]['name'];
+  }
+});
+
+
+  </script>
 </head>
 <body>
 
@@ -36,7 +60,12 @@
 		</header>
 		<div class="sisi-kiri">
 			<h4>Anda dapat mencari musisi - musisi sesuai yang anda inginkan untuk mengisi acara anda</h4>
+      <div id="api" style="width:500px;height:300px;">
 		</div>
+
+
+
+    </div>
 
 		<div class="jumbotron sisi-kanan">
 			<form role="form">

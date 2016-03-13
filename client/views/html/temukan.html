@@ -9,6 +9,55 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+  <script>
+    $.ajax({
+      url         : "http://localhost:3000/api/musicians",//lokasi dokumen yang berisi data json
+      type        : "GET",
+      dataType    : "json",//format dokumen
+      data        : {get_param : 'value'},
+      success     : function(data){
+        jlhMusisi = data.length;
+        tabelMusisi = "";
+
+        var listMusisi = document.getElementsByClassName("list-musisi-group");
+        for(i=0;i<jlhMusisi;i++){
+//          listMusisi.createElement("div");
+//          listMusisi.setAttribute("class","list-musisi"+"i");
+//          listMusisi.createTextNode("No. "+"i "+ data[i]["name"]);
+
+//          tabelMusisi += "<tr>"+
+//          "<td>" + (i+1) + "</td>"+
+//          "<td>" + data[i]["name"] + "</td>"
+//            + "<tr/>" ;
+
+//          listMusisi[0].appendChild()
+          var musisi = document.createElement("div");
+          musisi.setAttribute("class","list-musisi");
+          musisi.setAttribute("id","musisi-"+data[i]["musician_id"]);
+
+          var jdlMusisi = document.createElement("h4");
+
+          var textNama = document.createTextNode(data[i]["name"]);
+          var textBio = document.createTextNode("Bio : "+data[i]["bio"]);
+
+          var bio = document.createElement("h5");
+
+          jdlMusisi.appendChild(textNama);
+          musisi.appendChild(jdlMusisi);
+          musisi.appendChild(bio)
+          bio.appendChild(textBio);
+          listMusisi[0].appendChild(musisi);
+        }
+
+        //merubah data json dari object menjadi string,
+        //dan tampilkan hasilnya melalui textarea
+//    document.getElementById('api').innerHTML = JSON.stringify(data);
+//        document.getElementsByClassName('list-musisi-group')[0].innerHTML = tabelMusisi;
+      }
+    });
+  </script>
+
 </head>
 <body>
 
@@ -55,70 +104,70 @@
 				<option value="">Jazz</option>
 			</select>
 			<div class="list-musisi-group">
-				<div class="list-musisi">
+				<!--<div class="list-musisi">-->
 
 
-				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
+				  	<!--&lt;!&ndash;<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">&ndash;&gt;-->
 
-				  	<div class="isi-list-group-item">
-				  		Ampas Coffe
-				  	</div>
-				  	<div class=" isi-list-group-item">
-				  		Lokasi : Medan, 11 KM
-				  	</div>
-				  	<div class="isi-list-group-item">
-				  		Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!
-				  	</div>
-				  	<div class="fitur-temukan">
-				  		<button class="btn-md">Rp. 50.000 / lagu</button>
-				  	</div>
-				</div>
-				<div class="list-musisi">
-
-
-				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
-
-				  	<div class="isi-list-group-item">
-				  		Ampas Coffe
-				  	</div>
-				  	<div class=" isi-list-group-item">
-				  		Lokasi : Medan, 11 KM
-				  	</div>
-				  	<div class="isi-list-group-item">
-				  		Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!
-				  	</div>
-				</div>
-				<div class="list-musisi">
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Ampas Coffe&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class=" isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Lokasi : Medan, 11 KM&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--<div class="fitur-temukan">-->
+				  		<!--<button class="btn-md">Rp. 50.000 / lagu</button>-->
+				  	<!--</div>-->
+				<!--</div>-->
+				<!--<div class="list-musisi">-->
 
 
-				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
+				  	<!--&lt;!&ndash;<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">&ndash;&gt;-->
 
-				  	<div class="isi-list-group-item">
-				  		Ampas Coffe
-				  	</div>
-				  	<div class=" isi-list-group-item">
-				  		Lokasi : Medan, 11 KM
-				  	</div>
-				  	<div class="isi-list-group-item">
-				  		Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!
-				  	</div>
-				</div>
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Ampas Coffe&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class=" isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Lokasi : Medan, 11 KM&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				<!--</div>-->
+				<!--<div class="list-musisi">-->
 
-				<div class="list-musisi">
+
+				  	<!--&lt;!&ndash;<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">&ndash;&gt;-->
+
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Ampas Coffe&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class=" isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Lokasi : Medan, 11 KM&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, aliquam!&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				<!--</div>-->
+
+				<!--<div class="list-musisi">-->
 
 
-				  	<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">
+				  	<!--&lt;!&ndash;<img src="../img/gillian.jpg" id="gambar-musisi" class="img-circle" width="100px" height="100px" alt="">&ndash;&gt;-->
 
-				  	<div class="isi-list-group-item">
-				  		Ampas Coffe
-				  	</div>
-				  	<div class=" isi-list-group-item">
-				  		Lokasi : Medan, 11 KM
-				  	</div>
-				  	<div class="isi-list-group-item">
-				  		bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aspernatur maiores accusamus quisquam dolorem non eaque ducimus labore quae in nobis, esse quo beatae, eum alias. Quia eos dolor culpa.
-			  	</div>
-			</div>
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Ampas Coffe&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class=" isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;Lokasi : Medan, 11 KM&ndash;&gt;-->
+				  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				  	<!--&lt;!&ndash;<div class="isi-list-group-item">&ndash;&gt;-->
+				  		<!--&lt;!&ndash;bio : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aspernatur maiores accusamus quisquam dolorem non eaque ducimus labore quae in nobis, esse quo beatae, eum alias. Quia eos dolor culpa.&ndash;&gt;-->
+			  	<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--</div>-->
 
 		</div>
 			</div>

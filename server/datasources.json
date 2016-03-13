@@ -6,7 +6,7 @@
   "mongo_db": {
     "host": "localhost",
     "port": 27017,
-    "database": "",
+    "database": "gigloud_db",
     "password": "",
     "name": "mongo_db",
     "connector": "mongodb",

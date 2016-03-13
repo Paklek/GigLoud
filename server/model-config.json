@@ -37,5 +37,11 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "musician": {
+    "dataSource": "mongo_db",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
